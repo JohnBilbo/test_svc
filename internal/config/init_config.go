@@ -11,7 +11,7 @@ func ReadConfigFromEnv() *model.Config {
 
 	// Server
 	config.Server.Host = viper.GetString("APP.SERVER.HOST")
-	config.Server.Host = viper.GetString("APP.SERVER.PORT")
+	config.Server.Port = viper.GetString("APP.SERVER.PORT")
 
 	// Database
 	config.Database.Host = viper.GetString("APP.DB.HOST")
