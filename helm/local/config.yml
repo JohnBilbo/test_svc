@@ -1,0 +1,15 @@
+APP:
+  SERVER:
+    HOST: "localhost"
+    PORT: 8080
+  DB:
+    HOST: "localhost"
+    PORT: "5432"
+    USER:
+    PASSWORD:
+    NAME:
+    SSL_MODE: "disable"
+    TIME_ZONE: "Asia/Almaty"
+    MAX_CONS: 20
+    MIN_CONS: 10
+    MAX_CONN_IDLE_TIME: 10
