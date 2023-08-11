@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"github.com/jackc/pgx/v5/pgxpool"
+	"github.com/spf13/viper"
 	"test_svc/internal/config"
 	"test_svc/internal/logger"
 	"test_svc/internal/service"
@@ -13,9 +14,9 @@ import (
 
 func main() {
 	ctx := context.Background()
+	viper.Set("APP.SERVER.HOST", "localhost")
+	viper.Set("APP.SERVER.PORT", "8080")
 	cfg := config.ReadConfigFromEnv()
-	cfg.Server.Host = "localhost"
-	cfg.Server.Port = "8080"
 	log := logger.InitLogger()
 	//db, err := postgre.InitDB(ctx, cfg)
 	//if err != nil {

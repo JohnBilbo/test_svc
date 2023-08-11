@@ -10,8 +10,8 @@ func ReadConfigFromEnv() *model.Config {
 	var config model.Config
 
 	// Server
-	config.Server.Host = viper.GetString("APP.HTTP_SERVER.HOST")
-	config.Server.Host = viper.GetString("APP.HTTP_SERVER.PORT")
+	config.Server.Host = viper.GetString("APP.SERVER.HOST")
+	config.Server.Host = viper.GetString("APP.SERVER.PORT")
 
 	// Database
 	config.Database.Host = viper.GetString("APP.DB.HOST")
