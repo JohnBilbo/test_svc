@@ -24,9 +24,9 @@ func main() {
 	//	os.Exit(-1)
 	//}
 	var db pgxpool.Pool
-	storage := storage.InitStorage(cfg, log, &db)
-	service := service.InitService(cfg, log, storage)
-	handler := transport.InitHandler(cfg, log, service)
+	Storage := storage.InitStorage(cfg, log, &db)
+	Service := service.InitService(cfg, log, Storage)
+	handler := transport.InitHandler(cfg, log, Service)
 	server := http.InitServer(cfg, log, handler)
 	server.ServerStart(ctx)
 }
